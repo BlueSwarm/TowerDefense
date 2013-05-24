@@ -1,9 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Camera\CameraZoom.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Tower\SpawnTower.cs">
     <Files>
-      <File FileName="Assets\Scripts\Camera\CameraMovement.cs" Line="25" Column="43" />
-      <File FileName="Assets\Scripts\Camera\CameraZoom.cs" Line="23" Column="22" />
+      <File FileName="Assets\Scripts\Tower\HolderUtilities.cs" Line="12" Column="20" />
+      <File FileName="Assets\Scripts\Tower\SpawnTower.cs" Line="95" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

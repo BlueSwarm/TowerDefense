@@ -1,0 +1,23 @@
+There are a lot of stuff to check out.
+
+For starters, I removed the build folder. As I said, I won't
+commit any excecutables.
+
+I made a change in CameraZoom.cs in order to make the speed
+more reasonable! The issue was that when you get an axis input,
+the return value will always be between -1 and 1. That means,
+we lower the speed by multiplying it with the result!
+
+I made a prefab of a tower holder. This is going to be placed,
+anywhere we need tower places on the map. Together with the prefab,
+I made 2 scripts. HolderUtilities.cs, which is going to hold
+all the functions we need to control the holder from other scripts
+and SpawnTower.cs, which checks the mouse for clicks and sents
+a message to the holder that we clicked, saying that we want to
+spawn a tower there.
+
+I also made a few simple color materials and changed the shaders
+from default difuse to cartoon.
+
+As always, if anyone has any question, submit an issue. I'll be happy
+to help as soon as I can.
