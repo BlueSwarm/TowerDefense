@@ -1,0 +1,15 @@
+From now on, I will include detailed commments in my scripts.
+Start with the CameraMovement.cs located in Assets/Scripts.
+
+As I mentioned in an Issue/Comment, most of the files you see are
+created by the engine itself. The only things I added so far
+are 2 scripts and 1 saved scene.
+
+The scene just saves all the game objects and their attributes.
+
+In general, the new content will always be located in the
+Assets folder. If I place something in a different folder,
+I will mention it.
+
+Please, read the the comments in the scripts and if you have any 
+issues, please open an issue and I will be sure to reply.
