@@ -5,40 +5,68 @@ public class SpawnTower : MonoBehaviour
 {
 	private GameObject towerHolder;
 	
+	private bool spawnCommand = false;
+	private bool removeCommand = false;
+	private string selectedTower;
+	
 	void Update () 
 	{
-		if (SpawnCommand ())
+		if (spawnCommand)
 		{
 			Spawn ();
+			spawnCommand = false;
+		}
+		else if (removeCommand)
+		{
+			Remove ();
+			removeCommand = false;
 		}
 	}
 	
-	bool SpawnCommand ()
+	public void SpawnCommand ()
 	{
-		// Checking for mouse left click.
-		// This is going to activate only
-		// in the frame in which we left clicked.
-		return Input.GetMouseButtonDown (0);
+		// This is only going to be called when the GUI
+		// gets the left click event.
+		spawnCommand = true;	
+	}
+	
+	public void RemoveCommand ()
+	{
+		// Same as SpawnCommand.
+		// It depends on what we have selected.
+		removeCommand = true;
 	}
 	
 	void Spawn ()
 	{
-		// In the future we are going to first check if we have a tower
-		// selected and if we don't then we won't bother raycasting.
-		// I won't do it till we have a GUI for testing reasons.
+		// Early exit because there is no tower selected.
+		if (selectedTower == "None")
+		{
+			return;
+		}
 		
 		// Get the collider we hit with the raycast
 		Collider colliderHit = GetMousePosition ();
 		
 		// Check if we can spawn a tower there
 		if (CheckCollider (colliderHit))
-		{
-			// Get the tower
-			string tower = GetSelectedTower ();
-		
+		{		
 			// Spawn it!
-			GiveSpawnCommand (tower);
+			GiveSpawnCommand ();
 		}		
+	}
+	
+	void Remove ()
+	{
+		// Exactly like the spawn function.		
+		Collider colliderHit = GetMousePosition ();
+		
+		// The main difference is that we want to proceed
+		// if the holder IS holding a tower.
+		if (!CheckCollider (colliderHit))
+		{
+			GiveRemoveCommand ();
+		}
 	}
 	
 	Collider GetMousePosition ()
@@ -69,6 +97,13 @@ public class SpawnTower : MonoBehaviour
 	{
 		// We will just check if the collider has the tag "TowerHolder"
 		// and then check if we can actually spawn there.
+		
+		// Early exit check
+		if (!colliderHit)
+		{
+			return false;
+		}
+		
 		if (colliderHit.tag == "TowerHolder")
 		{
 			// Keep a copy of the transform.
@@ -82,16 +117,21 @@ public class SpawnTower : MonoBehaviour
 		return false;
 	}
 	
-	string GetSelectedTower ()
+	public void SetSelectedTower (string tower)
 	{
-		// This method is going to look into the GUI script
-		// where we'll have the selected tower stored.
-		return string.Empty;
+		// This is being called by the GUI to set the selected tower.
+		selectedTower = tower;
 	}
 	
-	void GiveSpawnCommand (string tower)
+	void GiveSpawnCommand ()
 	{
 		HolderUtilities huInstance = towerHolder.GetComponent<HolderUtilities> ();
-		huInstance.HoldTower (tower);
+		huInstance.HoldTower (selectedTower);
+	}
+	
+	void GiveRemoveCommand ()
+	{
+		HolderUtilities huInstance = towerHolder.GetComponent<HolderUtilities> ();
+		huInstance.RemoveTower ();
 	}
 }

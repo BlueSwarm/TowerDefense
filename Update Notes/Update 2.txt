@@ -1,0 +1,14 @@
+A smaller update this time.
+
+Added a gui script under Assets/GUI/Scripts.
+Made changes in the SpawnTower and HolderUtilities scripts.
+
+The game now recognizes when we spawn a tower and when we 
+remove one.
+
+Added an exit script. Escape is the exit key now.
+
+Next time I will create a tower prefab and add it into the game.
+
+Be sure to check the new and old scripts. If there are any issues
+please let me know in the Issue section.

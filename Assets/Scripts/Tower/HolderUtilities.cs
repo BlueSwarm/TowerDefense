@@ -19,7 +19,6 @@ public class HolderUtilities : MonoBehaviour
 			
 			if (child.gameObject.name == "Particle Effect")
 			{
-				Debug.Log (child.name);
 				child.gameObject.SetActive (false);
 				break;
 			}
@@ -30,8 +29,8 @@ public class HolderUtilities : MonoBehaviour
 		holds = true;
 	}
 	
-	public void RemoveTower (Transform tower)
-	{
+	public void RemoveTower ()
+	{		
 		// Destroy the tower
 		GameObject.Destroy (tower);
 		holds = false;
