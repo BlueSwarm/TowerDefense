@@ -1,0 +1,17 @@
+Another small update.
+
+This time I created a new prefab called Tower.
+
+For now it's just a simple rectangle cube that does nothing
+but teting our functions!
+
+Looks like the spawn and remove functions of the game works
+fine. If anyone tries out and discover some bugs, please let
+me know. Please check the HolderUtilities script, if you want to
+see how we instantiate a prefab in the game!
+
+I added a new script called PrefabChest. It will hold all the
+prefabs so that any script that wants to access one, can simply
+grab it from the chest.
+
+Next time, a simple map, enemies and towers shooting at them!!!

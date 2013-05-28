@@ -48,6 +48,7 @@
      <Compile Include="Assets\Scripts\Camera\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraZoom.cs" />
      <Compile Include="Assets\Scripts\Map Logic\GeneralMapLogic.cs" />
+     <Compile Include="Assets\Scripts\Tools\PrefabChest.cs" />
      <Compile Include="Assets\Scripts\Tower\HolderUtilities.cs" />
      <Compile Include="Assets\Scripts\Tower\SpawnTower.cs" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
