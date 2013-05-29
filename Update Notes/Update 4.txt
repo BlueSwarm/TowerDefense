@@ -1,0 +1,32 @@
+First of all, I didn't make everything I said I would do on my last update.
+
+I did make a really simple map, so we have that.
+
+I added a scene that will show you how the enemy ai moves.
+I wasn't sure how to implement an ai system, but then it hit me.
+The purpose of this project is to make everything simple and understanable.
+It's the base for something greater. So, the ai is pretty simple as well!
+
+If you open the scene in the editor, you will notice a new game object called
+"AI Path". It's children are nodes. A node is a game object with only a transform
+attached to it.
+
+Now, if you open up the new AIMovement script, under Assets/Scripts/AI/,
+you'll notice the lack of comments. I am going to explain everything here,
+because the code itself doesn't need much explanation.
+
+The way the ai works is as simple as this: Right after the enemy spawns,
+he looks for the first node. When he finds that node, he moves towards it.
+transform.LookAt (target) does exactly what it says. It changes the rotation
+to face our target. Our target of course is the node. After the enemy reaches
+the node, he looks for the next node. This goes until we don't have another node
+to go to, which means our path is over and we reached our destination. Then,
+we simply destroy the enemy. Later on, we will inform the game that the enemy
+reached the end.
+
+We are almost done with the basics of the game. We just need the towers to shoot,
+a victory/defeat scenario and that's it! The rest will be just content like,
+extra towers, enemies, maps.
+
+I really hope everything is clear to everytone that follows this project.
+If you have any problems, please let me know in the issue section.
