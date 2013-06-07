@@ -45,13 +45,16 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\GUI\Scripts\GeneralMapGUI.cs" />
+     <Compile Include="Assets\Scripts\AI\AILife.cs" />
      <Compile Include="Assets\Scripts\AI\AIMovement.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraZoom.cs" />
      <Compile Include="Assets\Scripts\Map Logic\GeneralMapLogic.cs" />
      <Compile Include="Assets\Scripts\Tools\PrefabChest.cs" />
      <Compile Include="Assets\Scripts\Tower\HolderUtilities.cs" />
+     <Compile Include="Assets\Scripts\Tower\ProjectileUtilities.cs" />
      <Compile Include="Assets\Scripts\Tower\SpawnTower.cs" />
+     <Compile Include="Assets\Scripts\Tower\TowerAttack.cs" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Standard Assets\Tessellation Shaders\BumpedSpecularSmooth.shader" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />

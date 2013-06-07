@@ -73,7 +73,6 @@ public class AIMovement : MonoBehaviour
 				break;
 			}
 		}
-		Debug.Log (this.node.name);
 	}
 	
 	void Move ()

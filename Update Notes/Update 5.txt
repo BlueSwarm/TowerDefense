@@ -1,0 +1,36 @@
+This time we implement a few important things, such as towers shooting,
+detecting whenever we hit the enemy and of course making some damage to them
+which eventualy kills them.
+
+Let's start with the shooting part. Last time we added a prefab in our collection,
+the projectile prefab. This prefab had a collider set to trigger and a rigidbody.
+If you check now it also has a script attached to it, ProjectileUtilities.
+
+Now if you go and check the TowerAttack script, you can see that we added a whole
+bunch of things in there. The comments explain everything apart from the rigidbody,
+which I will explain here.
+
+What is a rigidbody?
+A rigidbody is a physics component which allows the engine to manipulate the game
+object according to the physics. In every physics frame, the engine will try
+to apply gravity and see if the rigidbody has any more forces applied on it.
+It is crucial if you want to have a physics based movement, which is way more
+difficult to make than a simple transform movement.
+
+Why have a rigidbody on our projectile?
+As I explain in one of the comments, we need a rigidbody on either the trigger or
+the collider that we need to detect. Making the enemies have the rigidbody would
+mess up their movement and it would need a lot of refining. But the projectile
+doesn't need a smooth movement. It is a bullet, so it has to be fast with an
+exploding start! That's why it's really useful and easy to just Instantiate the 
+prefab as a rigidbody and just add a lot of velocity on it.
+
+One of the issues I had was when the towers missed because the enemy was turning 
+around. That meant, I had a lot of loose projectiles all around the map. But as
+you can see in the ProjectileUtilities, we have a simple function that takes care
+of that. I'll say it here as well. Game Developement is all about making tools
+that you can use throughout your game with ease. It would be frustrating to have
+to change the map limits each time we have a new map, or to change the ai path
+in a script, or to adjust tower spawn locations. That's why I make these
+general tools. It will be really simple to make a new map. Just attach some scripts,
+add game objects in the scene, change a few variables and it's all ready to go!
