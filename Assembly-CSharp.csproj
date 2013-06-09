@@ -47,6 +47,7 @@
      <Compile Include="Assets\GUI\Scripts\GeneralMapGUI.cs" />
      <Compile Include="Assets\Scripts\AI\AILife.cs" />
      <Compile Include="Assets\Scripts\AI\AIMovement.cs" />
+     <Compile Include="Assets\Scripts\AI\AISpawner.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraZoom.cs" />
      <Compile Include="Assets\Scripts\Map Logic\GeneralMapLogic.cs" />

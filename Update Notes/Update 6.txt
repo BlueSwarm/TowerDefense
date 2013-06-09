@@ -1,0 +1,12 @@
+This must be the smaller update on this project so far!
+
+We just added a spawner with his working script.
+The script is really simple and it was something new for me as well!
+I never tried adding children before through script and see how the 
+Unity engine handles it. It turns out, really well! That's a cool feature.
+
+You almost have anything you need in order to make your own maps (if you want).
+The last few main things we need before the polish are the core and a way
+to determine if we won or lose.
+
+As always, if you have anything to ask/suggest/say, visit the issues section.
