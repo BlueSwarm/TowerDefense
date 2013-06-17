@@ -2,9 +2,12 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\AI\AISpawner.cs">
     <Files>
-      <File FileName="Assets\Scripts\AI\AISpawner.cs" Line="68" Column="24" />
-      <File FileName="Assets\Scripts\Tower\TowerAttack.cs" Line="91" Column="57" />
-      <File FileName="Assets\Scripts\Tower\ProjectileUtilities.cs" Line="42" Column="19" />
+      <File FileName="Assets\Scripts\Map Logic\CoreLife.cs" Line="17" Column="28" />
+      <File FileName="Assets\Scripts\AI\AISpawner.cs" Line="69" Column="46" />
+      <File FileName="Assets\Scripts\Tower\TowerAttack.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Tower\ProjectileUtilities.cs" Line="39" Column="2" />
+      <File FileName="Assets\Scripts\AI\AIMovement.cs" Line="18" Column="3" />
+      <File FileName="Assets\Scripts\Map Logic\GeneralMapLogic.cs" Line="63" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

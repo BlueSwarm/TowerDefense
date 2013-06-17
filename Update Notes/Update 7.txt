@@ -1,0 +1,28 @@
+We are pretty much done with the mechanics!
+
+I added a core and a way to understand what is going on with the game. Are we
+still going? Did we win? Did we lose?
+
+I have to admit that I had a hard time making the core work because the enemies
+couldn't trigger his collision script. But in the end I made it a trigger
+like the projectiles and it worked.
+
+So, I suggest taking a look at the new scripts and the small changes in the old
+ones. You can see what files have been changed/added under this commit, but I
+will list them here:
+
+AISpawner
+GeneralMapLogic
+CoreLife
+
+Now I want to work on making a simple main menu and it would be nice to have
+a way to store maps in files. Scenes work alright but you have to add them
+in a list before making a build. So, a main menu and map storing. After these
+things are done, I will make a tutorial on how to make maps. It would be nice
+to have a map pack in which everyone that follows this example project can 
+contribute. You can probably work out how to make your own map by looking at the
+test scene but I feel the need to make that tutorial. As you can see, there are 
+a lot of things to come and I feel excited!
+
+As always, if you have any issues or just want to make a comment, visit the
+issues section.

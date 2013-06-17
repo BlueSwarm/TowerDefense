@@ -25,6 +25,7 @@ public class AIMovement : MonoBehaviour
 		if (EndOfPath ())
 		{
 			DestroyObject ();
+			return;
 		}
 		
 		if (ReachedNode ())

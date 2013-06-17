@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\AI\AISpawner.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraZoom.cs" />
+     <Compile Include="Assets\Scripts\Map Logic\CoreLife.cs" />
      <Compile Include="Assets\Scripts\Map Logic\GeneralMapLogic.cs" />
      <Compile Include="Assets\Scripts\Tools\PrefabChest.cs" />
      <Compile Include="Assets\Scripts\Tower\HolderUtilities.cs" />

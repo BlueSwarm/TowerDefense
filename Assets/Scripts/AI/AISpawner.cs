@@ -55,7 +55,7 @@ public class AISpawner : MonoBehaviour
 		// At first I didn't think this would work but it looks
 		// like Unity updates the childCount whenever we add/remove
 		// the parent in the child info.
-		return enemyParent.childCount == 0;
+		return enemyParent.childCount == 0 && !spawning;
 	}
 	
 	void SpawnNextEnemy ()
@@ -76,5 +76,17 @@ public class AISpawner : MonoBehaviour
 		}
 		
 		lastSpawn = Time.time;
+	}
+	
+	public bool WavesOver ()
+	{
+		// We will also check if there are enemies around.
+		// This will be the way to check if we actually 
+		// won the map.
+		if (waves < currentWave && CheckWaveOver ())
+		{
+			return true;
+		}
+		return false;
 	}
 }
