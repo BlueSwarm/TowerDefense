@@ -7,28 +7,30 @@ public class HolderUtilities : MonoBehaviour
 	
 	private PrefabChest pcInstance;
 	private Transform tower;
+	private Transform particleEffect;
 		
 	void Start ()
 	{
 		pcInstance = GameObject.Find ("MapLogic").GetComponent<PrefabChest> ();
+		
+		// This implementation was suggested by arrowgamer.
+		// It's way more efficient and easy for the eye
+		// to just look for the particle effect once
+		// and hold an instance of it in a private variable.
+		foreach (Transform child in transform)
+		{
+			if (child.name == "Particle Effect")
+			{
+				this.particleEffect = child;
+				break;
+			}
+		}
 	}
 	
 	public void HoldTower (string tower)
 	{
 		// Stop particles
-		foreach (Transform child in transform)
-		{
-			// I use foreach because I plan on having
-			// more than one child. I will get their
-			// transform and then I can access their
-			// GameObject.
-			
-			if (child.gameObject.name == "Particle Effect")
-			{
-				child.gameObject.SetActive (false);
-				break;
-			}
-		}
+		particleEffect.gameObject.SetActive (false);
 		
 		// Asign the tower and create the game object
 		// Get the prefab from the chest.
@@ -66,14 +68,6 @@ public class HolderUtilities : MonoBehaviour
 		holds = false;
 		
 		// Enable particles
-		// Same thing as before
-		foreach (Transform child in transform)
-		{			
-			if (child.gameObject.name == "Particle Effect")
-			{
-				child.gameObject.SetActive (true);
-				break;
-			}
-		}
+		particleEffect.gameObject.SetActive (true);
 	}
 }

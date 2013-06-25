@@ -1,0 +1,25 @@
+NOTE: Don't pay attention to the new simple menu scene or to the SimpleMenuGUI
+script. They are work in progress and I only commit them so that the unity
+generated files don't get confused and cause any issues.
+
+Thanks to arrowgamer for opening my eyes in HolderUtilities. The way I was
+doing it was really stupid and so I have changed it to a more efficient and
+pleasing to the eye implementation :)
+
+I was thinking about map storing and an efficient way to do it. The most 
+straight forward way that I could think, is to store the names of the prefabs
+we need along with their transform. Everything is saved as a prefab in this
+project and just instantiating it in the scene works perfectly. 
+
+So, I was thinking of making a script that when you are done with creating your 
+map/scene, you can activate it and it will create 2 files for you. A file with 
+the list of names + transform and some settings that are needed to make your map
+unique. Settings like, spawn interval, number of waves, etc.
+
+I am sure it's not the best way to do it and if someone has a better idea,
+please let me know. I won't start working on it yet, to give people a chance
+to catch up and maybe come up with a better idea. I will be thinking of any
+better implementations.
+
+As always, if you have anything to say/ask make an issue or right a comment on the
+part of the commit you want.
