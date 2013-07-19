@@ -1,0 +1,12 @@
+In Update 9 we complete the first phase of community mapping.
+
+Again, I love Arrowgamer. He got me in touch with JSON, which we use to store our maps
+and there is a really good explanation about the whole map exporting in ExportMap.cs.
+
+Make sure to read "Map Exporting Instructions" before using the script!
+
+Feel free to Pull Request your maps :)
+
+As always, ask me anything you want. Next update we will finish with maps and move on to
+the main menu. Before I do that though, I will explain my vision of the main menu, like I
+did with map storing.

@@ -1,0 +1,6 @@
+After you are done creating your map and you a similar layout with the test map
+(same game object names), add the ExportMap script on MapLogic. Then, go in Play Mode
+and you'll notice that there are not enemies spawning. That's a good thing. The script,
+prevents any automatic game creation so that we can keep the map at it's pure form.
+After a little while (1-2 seconds) you can stop Play Mode. There should be a file with the
+name of your scene under the Maps folder. That's the only file you need right now.

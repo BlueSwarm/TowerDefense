@@ -7,14 +7,21 @@ public class GeneralMapLogic : MonoBehaviour
 	public bool defeat = false;
 	
 	private AISpawner spawnerScript;
+	public bool export;
 	
 	void Start () 
 	{
 		spawnerScript = GameObject.Find ("EnemySpawner").GetComponent<AISpawner> ();
+		if (gameObject.GetComponent <ExportMap> ().enabled)
+		{
+			export = true;
+		}
 	}
 	
-	void Update () 
+	void Update ()
 	{
+		spawnerScript.export = export;
+		
 		Exit ();
 		
 		if (!finished)

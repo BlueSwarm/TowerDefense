@@ -10,6 +10,8 @@ public class AISpawner : MonoBehaviour
 	public int perWave;
 	public int interval;
 	
+	public bool export;
+	
 	public Transform enemyPrefab;
 	private Transform enemyParent;
 	
@@ -19,6 +21,8 @@ public class AISpawner : MonoBehaviour
 	
 	void Start () 
 	{
+		export = false;
+		
 		enemyParent = GameObject.Find ("Enemies").transform;
 		currentWave = 1;
 		spawning = false;
@@ -27,6 +31,12 @@ public class AISpawner : MonoBehaviour
 	
 	void Update () 
 	{
+		// Early exit if we export the map.
+		if (export)
+		{
+			return;
+		}
+		
 		// As you may have noticed I have the habit of writing
 		// some kind of algorithm in my Update function.
 		// I think this is a good way of creating an image
