@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\Map Logic\CoreLife.cs" />
      <Compile Include="Assets\Scripts\Map Logic\GeneralMapLogic.cs" />
      <Compile Include="Assets\Scripts\Tools\ExportMap.cs" />
+     <Compile Include="Assets\Scripts\Tools\ImportMap.cs" />
      <Compile Include="Assets\Scripts\Tools\PrefabChest.cs" />
      <Compile Include="Assets\Scripts\Tower\HolderUtilities.cs" />
      <Compile Include="Assets\Scripts\Tower\ProjectileUtilities.cs" />

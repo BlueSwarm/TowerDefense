@@ -21,21 +21,21 @@ using WyrmTale;
 // write it down in our file.
 public class ExportMap : MonoBehaviour 
 {
-	// There are a lot of ways to write data in files
-	// and StreamWriter is my favorite. It's really simple
-	// and straightforward.
-	private StreamWriter sw;
-	
+		
 	void Start ()
 	{
+		// There are a lot of ways to write data in files
+		// and StreamWriter is my favorite. It's really simple
+		// and straightforward.
 		// Here we open our stream and we are ready to write down stuff.
 		// Just keep in mind that we have to close the stream after we are done.
 		string mapName = Application.loadedLevelName;
-		sw = new StreamWriter (@".\Maps\" + mapName + ".data");
+		StreamWriter sw = new StreamWriter (@".\Maps\" + mapName + ".data");
 		
-		// AI Path
 		JSON js;
 		string json;
+		
+		// AI Path
 		GameObject nextObject = GameObject.Find ("AI Path");
 		sw.WriteLine ("AI Path:\n" + TransformToJSON (nextObject).serialized);
 		

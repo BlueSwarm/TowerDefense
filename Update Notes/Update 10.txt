@@ -1,0 +1,29 @@
+NOTE: There are some bugs I found out at the last minute with the spawner
+and it will be fixed first thing next update. The bug won't stop you from
+creating and publishing maps.
+
+
+
+Today we finish up with map importing! We can now read the .dat map files we were able
+to create in the last update and succesfully re create the map at runtime! Hooray!
+
+The ImportMap scene is a plain scene, as you will see, with an importer. He only
+has our ImportMap.cs script. You should check it out. The script is really simple
+and was just a hussle to write (lots of checks and stuff).
+
+Next stop is the main menu. As I promised, here is my vision of it:
+
+Top right -> 2 Buttons (Play, Exit)
+From top left to just before the buttons start -> A list with all the maps found
+						  in the Maps folder.
+
+Clicking on a map, selects it and if you hit play it goes in the ImportMap scene,
+where we load the map!
+
+It is a pretty simple layout. It's just that I haven't tried doing a list
+in the Unity GUI yet.
+
+So! If you think my layout is faulty, or you have another idea, feel free to open an issue.
+
+As always, if you have anything to ask/tell me, just do it!
+

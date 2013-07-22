@@ -21,7 +21,7 @@ public class GeneralMapLogic : MonoBehaviour
 	void Update ()
 	{
 		spawnerScript.export = export;
-		
+			
 		Exit ();
 		
 		if (!finished)
