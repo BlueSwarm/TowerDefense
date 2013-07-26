@@ -13,6 +13,7 @@ public class GeneralMapGUI : MonoBehaviour
 	
 	private Rect tower1Rect;
 	private Rect removeRect;
+	private Rect nameRect;
 	
 	void Start () 
 	{
@@ -32,6 +33,8 @@ public class GeneralMapGUI : MonoBehaviour
 		
 		tower1Rect = new Rect (10, Screen.height - 110, 100, 100);
 		removeRect = new Rect (Screen.width - 110, Screen.height - 110, 100, 100);
+		int nameLenght = 10 * ImportMap.mapName.Length;
+		nameRect = new Rect (Screen.width - 25 - nameLenght, 10, nameLenght, 50);
 	}
 	
 	void Update () 
@@ -64,6 +67,9 @@ public class GeneralMapGUI : MonoBehaviour
 		
 		// Selected info Label
 		GUI.Label (selectedRect, selected);
+		
+		// Map name info label
+		GUI.Label (nameRect, ImportMap.mapName);
 		
 		// Tower buttons
 		if (GUI.Button (tower1Rect, "Tower 1"))

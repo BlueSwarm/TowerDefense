@@ -1,0 +1,19 @@
+Here for once we get an update sooner that it was expected!
+
+I finished up the main menu with it's appearance and it's functionality.
+You should go check the SimpleMenuGUI.cs script under GUI/Scripts.
+
+Some really small changes:
+	GeneralMapGUI - Added map name label on the top right of the screen.
+	ImportMap - No need to set the map name in the Start function. Left it in a
+		    comment in case we want to test without going through the menu.
+	AISpanwer - Changed on how we check if we spawned the right amount of enemies.
+	     	    Before the change, it would check if "perWave" enemies were in
+		    the scene. This didn't work if we had a lot of towers and the
+		    enemies died right away. Now we check it as it should have been
+		    and fixed that bug.
+
+Som what's next? The only crucial thing left to implement is the exit strategy. What
+happens when we win/lose. After this is done, we will have the base done. I am
+considering to expand it even more with more custom content. It will be that or I will
+take on another project. We'll see!

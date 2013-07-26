@@ -29,9 +29,10 @@ public class ImportMap : MonoBehaviour
 	void Start () 
 	{
 		// TESTING
-		// If you want to test your maps, just change the value.
+		// If you want to test your maps, without going through
+		// the menu, change the variable and get it out of the comments.
 		// Don't forget to have your files in the Maps folder.
-		mapName = "TestLevel";
+		// mapName = "TestLevel";
 		
 		// As with StreamWriter from ExportMap.cs, we use StreamReader
 		// in this occasion. Again, it's simple and I like it!

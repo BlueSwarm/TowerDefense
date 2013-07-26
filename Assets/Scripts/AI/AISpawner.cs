@@ -16,6 +16,7 @@ public class AISpawner : MonoBehaviour
 	private Transform enemyParent;
 	
 	private int currentWave;
+	private int spawned;
 	private float lastSpawn;
 	private bool spawning;
 	
@@ -27,6 +28,7 @@ public class AISpawner : MonoBehaviour
 		currentWave = 1;
 		spawning = false;
 		lastSpawn = Time.time - interval;
+		spawned = 0;
 	}
 	
 	void Update () 
@@ -56,6 +58,7 @@ public class AISpawner : MonoBehaviour
 			{
 				spawning = true;
 				currentWave++;
+				spawned = 0;
 			}
 		}
 	}
@@ -79,8 +82,9 @@ public class AISpawner : MonoBehaviour
 		Vector3 spawnPosition = transform.position;
 		Transform enemy = (Transform) Instantiate (enemyPrefab, spawnPosition, Quaternion.identity);
 		enemy.parent = enemyParent;
+		spawned++;
 		
-		if (enemyParent.childCount == perWave)
+		if (spawned == perWave)
 		{
 			spawning = false;
 		}
