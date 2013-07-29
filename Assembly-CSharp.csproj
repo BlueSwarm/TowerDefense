@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\Camera\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraZoom.cs" />
      <Compile Include="Assets\Scripts\Map Logic\CoreLife.cs" />
+     <Compile Include="Assets\Scripts\Map Logic\EndSequence.cs" />
      <Compile Include="Assets\Scripts\Map Logic\GeneralMapLogic.cs" />
      <Compile Include="Assets\Scripts\Tools\ExportMap.cs" />
      <Compile Include="Assets\Scripts\Tools\ImportMap.cs" />
@@ -69,9 +70,6 @@
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
      <None Include="Assets\Standard Assets\Tessellation Shaders\BumpedSpecularDisplacement.shader" />
- <Reference Include="Newtonsoft.Json">
- <HintPath>Assets\External Libraries\Newtonsoft.Json.dll</HintPath>
- </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">

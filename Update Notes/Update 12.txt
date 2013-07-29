@@ -1,0 +1,10 @@
+In this update we add a script that takes care of our exit plans, after we finished playing
+a level.
+
+Make sure to check EndSequence.cs under Assets/Scripts/Map Logic/
+Another script to check would be GeneralMapLogic.cs for the way we call our new script.
+
+I also removed the JSON library that we didn't use at all.
+
+As always guys, if you have anything to say, open an issue and I'll repsond as soon as
+I see it.

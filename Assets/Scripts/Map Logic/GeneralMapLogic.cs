@@ -30,7 +30,7 @@ public class GeneralMapLogic : MonoBehaviour
 		}
 		else
 		{
-			EndSequence ();
+			EndScene ();
 		}
 	}
 	
@@ -38,7 +38,7 @@ public class GeneralMapLogic : MonoBehaviour
 	{
 		if (Input.GetKeyDown (KeyCode.Escape))
 		{
-			Application.Quit ();
+			Application.LoadLevel (0);
 		}
 	}
 	
@@ -56,18 +56,14 @@ public class GeneralMapLogic : MonoBehaviour
 		}
 	}
 	
-	void EndSequence ()
+	void EndScene ()
 	{
-		// Here we call all the methods we need in order to 
-		// end the map and move on (go back to main menu or load
-		// next map). For now we just post it in the log.
-		if (defeat)
-		{
-			Debug.Log ("You lose!");
-		}
-		else
-		{
-			Debug.Log ("You win!");
-		}
+		// What we want from a scene after the game has ended,
+		// is to get back to the main menu. We have a special script
+		// for that called EndSequence. All it needs to know is if we
+		// have lost or won.
+		
+		EndSequence.defeat = defeat;
+		gameObject.GetComponent<EndSequence> ().enabled = true;
 	}
 }
