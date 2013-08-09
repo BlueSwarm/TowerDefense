@@ -1,0 +1,12 @@
+In this update we add something that I kinda forgot about. It is a critical point that defines the tower defense
+genre and we were missing it. We didn't have any credits! We had unlimited tower placement and no rewards for killing
+enemies. So we took care of that!
+
+There is also a new version of Unity out, so the project got upgraded into that.
+
+We have in general a lot of scripts that got updated for the credits. For example, GeneralMapLogic holds a public static
+variable that stores the credits, while in AILife when we are about to destroy the object, we add a small amount to our
+credits!
+
+So, makes sure to check the committed files list and get to see everything. If you have something to say/ask/suggest
+make sure to open an issue (or sent a mail or whatever).

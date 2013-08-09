@@ -181,6 +181,7 @@ public class ImportMap : MonoBehaviour
 		js.serialized = json;
 		
 		AssignTransform (logic, js);
+		GeneralMapLogic.credits = js.ToInt ("Credits");
 	}
 
 	void CreatePlayerView (string json)

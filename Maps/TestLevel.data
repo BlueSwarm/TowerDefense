@@ -1,5 +1,3 @@
-Description:
-A simple test level!
 AI Path:
 {"position":{"x":0,"y":0,"z":0},"rotation":{"x":0,"y":0,"z":0,"w":1},"scale":{"x":1,"y":1,"z":1}}
 Node 0:
@@ -29,7 +27,7 @@ Enemies:
 Enemy Spawner:
 {"position":{"x":-28,"y":0.5,"z":-13},"rotation":{"x":0,"y":0,"z":0,"w":1},"scale":{"x":1,"y":1,"z":1},"Waves":5,"Per Wave":5,"Interval":1}
 Map Logic:
-{"position":{"x":0,"y":0,"z":0},"rotation":{"x":0,"y":0,"z":0,"w":1},"scale":{"x":1,"y":1,"z":1}}
+{"position":{"x":0,"y":0,"z":0},"rotation":{"x":0,"y":0,"z":0,"w":1},"scale":{"x":1,"y":1,"z":1},"Credits":200}
 Player View:
 {"position":{"x":0,"y":10,"z":-15},"rotation":{"x":0.4226183,"y":0,"z":0,"w":0.9063078},"scale":{"x":1,"y":1,"z":1}}
 Terrain:

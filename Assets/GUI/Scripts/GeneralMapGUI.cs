@@ -11,6 +11,8 @@ public class GeneralMapGUI : MonoBehaviour
 	private string selected;
 	private Rect selectedRect;
 	
+	private Rect creditsRect;
+	
 	private Rect tower1Rect;
 	private Rect removeRect;
 	private Rect nameRect;
@@ -30,6 +32,8 @@ public class GeneralMapGUI : MonoBehaviour
 		
 		selected = "None";
 		selectedRect = new Rect (10, 10, 100, 50);
+		
+		creditsRect = new Rect (10, 30, 100, 50);
 		
 		tower1Rect = new Rect (10, Screen.height - 110, 100, 100);
 		removeRect = new Rect (Screen.width - 110, Screen.height - 110, 100, 100);
@@ -67,6 +71,9 @@ public class GeneralMapGUI : MonoBehaviour
 		
 		// Selected info Label
 		GUI.Label (selectedRect, selected);
+		
+		// Credits info label
+		GUI.Label (creditsRect, "Credits: " + GeneralMapLogic.credits);
 		
 		// Map name info label
 		GUI.Label (nameRect, ImportMap.mapName);

@@ -3,6 +3,8 @@ using System.Collections;
 
 public class GeneralMapLogic : MonoBehaviour 
 {
+	public static int credits = 200;
+	
 	public bool finished = false;
 	public bool defeat = false;
 	

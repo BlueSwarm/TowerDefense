@@ -73,8 +73,10 @@ public class ExportMap : MonoBehaviour
 		
 		// Map Logic
 		nextObject = GameObject.Find ("MapLogic");
-		sw.WriteLine ("Map Logic:\n" + TransformToJSON (nextObject).serialized);
-		
+		js = TransformToJSON (nextObject);
+		js["Credits"] = GeneralMapLogic.credits;
+		sw.WriteLine ("Map Logic:\n" + js.serialized);
+				
 		// Player View
 		nextObject = GameObject.Find ("Player View");
 		sw.WriteLine ("Player View:\n" + TransformToJSON (nextObject).serialized);

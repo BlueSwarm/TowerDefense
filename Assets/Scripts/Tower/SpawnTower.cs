@@ -50,9 +50,18 @@ public class SpawnTower : MonoBehaviour
 		
 		// Check if we can spawn a tower there
 		if (CheckCollider (colliderHit))
-		{		
-			// Spawn it!
-			GiveSpawnCommand ();
+		{
+			// Check if we have enough credits
+			if (CheckCredits ())
+			{
+				// Spawn it!
+				GiveSpawnCommand ();
+			}
+			else
+			{
+				// Say that you don't have enough credits.
+				Debug.Log ("Not enough credits");
+			}
 		}		
 	}
 	
@@ -112,6 +121,20 @@ public class SpawnTower : MonoBehaviour
 			// The line pretty much explains everything.
 			HolderUtilities huInstance = colliderHit.gameObject.GetComponent<HolderUtilities> ();
 			return !huInstance.holds;
+		}
+		
+		return false;
+	}
+	
+	private bool CheckCredits ()
+	{
+		if (selectedTower == "Tower 1")
+		{
+			if (GeneralMapLogic.credits >= 100)
+			{
+				GeneralMapLogic.credits -= 100;
+				return true;
+			}
 		}
 		
 		return false;

@@ -4,16 +4,13 @@ using System.Collections;
 public class AILife : MonoBehaviour 
 {
 	public int health = 50;
-	
-	void Start () 
-	{
-	
-	}
+	public int creditsOnDeath = 30;
 	
 	void Update () 
 	{
 		if (health <= 0)
 		{
+			GeneralMapLogic.credits += creditsOnDeath;
 			Destroy (this.gameObject);
 		}
 	}
